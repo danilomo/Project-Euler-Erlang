@@ -17,7 +17,7 @@ generate({100,100}) ->
 generate({N,M}) ->
     case palindrome(N*M) of
         true -> [ N*M | generate(next({N,M})) ];
-        _ -> generate(next({N,M}))                           
+        _ -> generate(next({N,M}))          
     end.            
 
 answer() -> lists:max(generate({999,999})).
